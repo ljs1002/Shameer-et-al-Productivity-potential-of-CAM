@@ -46,3 +46,4 @@ pathwayprioritizer - a file listing pathways and a value for each pathway 1,2,3 
 FractionalCharges - a file containing metabolite charges (to complement charge attribute in the model)  
 MetabolitesToTransfer - a file listing metabolites that will be allowed to accumulate over the diel cycle
 VacuolarMetabolitesAtpH3DOT3 - a file listing metabolites that exists as fractional charges at pH=3.3
+OpuntiaBiomass - phloem composition reported in Opuntia ficus indica
