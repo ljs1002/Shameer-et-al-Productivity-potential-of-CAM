@@ -20,3 +20,28 @@ a) using the command `python scriptname.py` where scriptname.py is the filename 
 
   
 The latter method is recommended as it maintains the data in the python environment allowing one to analyse metabolic fluxes directly and make your own figures.
+
+## Index
+Script1.py - estimating non-growth associated maintenance (NGAM) in a fully developed C3 leaf  
+Script2.py - modelling C3 and CAM systems: PPFD = 200 umol/m2/s  
+Script3.py - modelling CAM in Opuntia ficus indica  
+Script4.py - modelling C3 and CAM systems with fixed metabolic output  
+Script5.py - comparing productivity of CAM and C3 systems  
+Script6.py - comparing productivity of CAM and C3 systems with varying NGAM  
+Script7.py - comparing productivity of CAM and C3 systems with varying maintenance  
+Script8.py - estimating NGAM in a fully developed C3 leaf in 18h6h day  
+Script9.py - estimating NGAM in a fully developed C3 leaf in 6h18h day  
+Script10.py - comparing productivity of CAM and C3 systems under different photoperiod conditions  
+Script11.py - estimating NGAM in a fully developed C3 leaf when sucrose accounts for 50% of the phloem  
+Script12.py - estimating NGAM in a fully developed C3 leaf when sucrose accounts for 90% of the phloem  
+Script13.py - comparing productivity of CAM and C3 systems with varying sucrose content in the phloem  
+Script14.py - estimating NGAM in a fully developed C3 leaf when day-night phloem export rate ratio is 3:2  
+Script15.py - estimating NGAM in a fully developed C3 leaf when day-night phloem export rate ratio is 1:1  
+Script16.py - comparing productivity of CAM and C3 systems with varying day-night phloem export rate ratio  
+diel_core_model - a model representing day and night time metabolism, that have yet to be configured for CAM or C3 metabolism  
+C3_model - a model representing primary metabolism in C3 leaf with constraints matching that described in the paper  
+CAM_model - a model representing primary metabolism in CAM leaf with constraints matching that described in the paper  
+rxnpathwaydict - a file representing reactions and associated pathways which is required to print our pathway information in outputs  
+pathwayprioritizer - a file listing pathways and a value for each pathway 1,2,3 ... which can be used to prioritize reactions in the output file for easy interpretation  
+FractionalCharges - a file containing metabolite charges (to complement charge attribute in the model)  
+MetabolitesToTransfer - a file listing metabolites that will be allowed to accumulate over the diel cycle  
