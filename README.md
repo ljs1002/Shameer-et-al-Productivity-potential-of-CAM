@@ -44,6 +44,6 @@ CAM_model - a model representing primary metabolism in CAM leaf with constraints
 rxnpathwaydict - a file representing reactions and associated pathways which is required to print our pathway information in outputs  
 pathwayprioritizer - a file listing pathways and a value for each pathway 1,2,3 ... which can be used to prioritize reactions in the output file for easy interpretation  
 FractionalCharges - a file containing metabolite charges (to complement charge attribute in the model)  
-MetabolitesToTransfer - a file listing metabolites that will be allowed to accumulate over the diel cycle
+MetabolitesToTransfer - a file listing metabolites that will be allowed to accumulate over the diel cycle  
 VacuolarMetabolitesAtpH3DOT3 - a file listing metabolites that exists as fractional charges at pH=3.3
 OpuntiaBiomass - phloem composition reported in Opuntia ficus indica
