@@ -1,0 +1,25 @@
+			Charge	Fraction		Charge	Fraction		Charge	Fraction		Charge	Fraction	Comment
+MAL_v2	3	MAL_v2	-2	0	aMAL_v2	-1	0.56	aaMAL_v2	0	0.44				0.44(0) + 0.55 (-1) +0.01(-2) 
+FUM_v2	3	FUM_v2	-2	0	aFUM_v2	-1	0.38	aaFUM_v2	0	0.62				0.62(0) + 0.35(-1) + 0.03(-2)
+CIT_v2	4	CIT_v2	-3	0	aCIT_v2	-2	0	aaCIT_v2	-1	0.65	aaaCIT_v2	0	0.35	0.35(0) + 0.65(-1)
+L_ALPHA_ALANINE_v2	2	L_ALPHA_ALANINE_v2	0	0.87	bL_ALPHA_ALANINE_v2	1	0.13							
+CYS_v2	2	CYS_v2	0	1	bCYS_v2	1	0							0.9(0) + 0.1(+1)
+ASN_v2	2	ASN_v2	0	1	bASN_v2	1	0							0.95(0) + 0.05(+1)
+LEU_v2	2	LEU_v2	0	0.24	bLEU_v2	1	0.76							
+MET_v2	2	MET_v2	0	0.85	bMET_v2	1	0.15							
+LYS_v2	2	LYS_v2	1	0.78	bLYS_v2	2	0.22							
+TRP_v2	2	TRP_v2	0	0.85	bTRP_v2	1	0.15							
+PRO_v2	2	PRO_v2	0	1	bPRO_v2	1	0							0.96(0) + 0.04(+1)
+ILE_v2	2	ILE_v2	0	0.76	bILE_v2	1	0.24							
+HIS_v2	3	HIS_v2	0	0	bHIS_v2	1	0	bbHIS_v2	2	1				0(0) + 0.03(+1) + 0.97(2)
+THR_v2	2	THR_v2	0	1	bTHR_v2	1	0							0.93(0) + 0.07(+1)
+VAL_v2	2	VAL_v2	0	0.79	bVAL_v2	1	0.21							
+PHE_v2	2	PHE_v2	0	0.87	bPHE_v2	1	0.13							
+4_AMINO_BUTYRATE_v2	2	4_AMINO_BUTYRATE_v2	0	0.06	b4_AMINO_BUTYRATE_v2	1	0.94							
+SER_v2	2	SER_v2	0	1	bSER_v2	1	0							0.95(0) + 0.05(+1)
+ARG_v2	2	ARG_v2	1	0.89	bARG_v2	2	0.11							
+GLN_v2	2	GLN_v2	0	1	bGLN_v2	1	0							0.93(0) + 0.07(+1)
+GLY_v2	2	GLY_v2	0	1	bGLY_v2	1	0							0.91(0) + 0.09(+1)
+TYR_v2	2	TYR_v2	0	1	bTYR_v2	1	0							0.95(0) + 0.05(+1)
+GLT_v2	3	GLT_v2	-1	0.09	bGLT_v2	0	0.87	bbGLT_v2	1	0.03				
+L_ASPARTATE_v2	3	L_ASPARTATE_v2	-1	0	bL_ASPARTATE_v2	0	1	bbL_ASPARTATE_v2	1	0				0.02(-1) + 0.96(0) + 0.02(+1)

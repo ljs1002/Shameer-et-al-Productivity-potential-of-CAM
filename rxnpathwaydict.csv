@@ -1,0 +1,561 @@
+ACETATE_COA_LIGASE_RXN_p,acetylCoA biosynthesis
+ACETATE_COA_LIGASE_RXN_x,acetylCoA biosynthesis
+AMPSYN_RXN_p,adenosine nucleotides de novo biosynthesis
+ADENYL_KIN_RXN_p,adenosine nucleotides de novo biosynthesis
+ADENYL_KIN_RXN_m,adenosine nucleotides de novo biosynthesis
+ADENYL_KIN_RXN_c,adenosine nucleotides de novo biosynthesis
+ADENYLOSUCCINATE_SYNTHASE_RXN_p,adenosine nucleotides de novo biosynthesis
+ALANINE_AMINOTRANSFERASE_RXN_c,alanine degradation
+ALANINE_AMINOTRANSFERASE_RXN_m,alanine degradation
+ALANINE_AMINOTRANSFERASE_RXN_x,alanine degradation
+GLUTAMATE_DEHYDROGENASE_RXN_m,alanine degradation
+N_ACETYLGLUTPREDUCT_RXN_p,arginine biosynthesis
+ACETYLORNTRANSAM_RXN_p,arginine biosynthesis
+ACETYLGLUTKIN_RXN_p,arginine biosynthesis
+GLUTAMATE_N_ACETYLTRANSFERASE_RXN_p,arginine biosynthesis
+GLUTATHIONE_REDUCT_NADPH_RXN_p,ascorbate glutathione cycle
+RXN_3522_p,ascorbate glutathione cycle
+1_PERIOD_8_PERIOD_5_PERIOD_1_RXN_p,ascorbate glutathione cycle
+ASNSYNA_RXN_c,asparagine biosynthesis
+ASPAMINOTRANS_RXN_p,aspartate degradation
+ASPAMINOTRANS_RXN_x,aspartate degradation
+ASPAMINOTRANS_RXN_c,aspartate degradation
+ASPAMINOTRANS_RXN_m,aspartate degradation
+MALATE_DEH_RXN_m,Malate valve
+MALATE_DEH_RXN_c,Malate valve
+MALATE_DEH_RXN_x,Malate valve
+MALATE_DEH_RXN_p,Malate valve
+Ca_biomass,Biomass
+pALA_biomass,Biomass
+pASN_biomass,Biomass
+pASP_biomass,Biomass
+pARG_biomass,Biomass
+sGABA_biomass,Biomass
+Glycerol_biomass,Biomass
+sGLU_biomass,Biomass
+pHIS_biomass,Biomass
+sGLN_biomass,Biomass
+pMET_biomass,Biomass
+pGLY_biomass,Biomass
+sASP_biomass,Biomass
+pLYS_biomass,Biomass
+pVAL_biomass,Biomass
+sALA_biomass,Biomass
+pTHR_biomass,Biomass
+pSER_biomass,Biomass
+pILE_biomass,Biomass
+sSUCROSE_biomass,Biomass
+pGLN_biomass,Biomass
+pTYR_biomass,Biomass
+pGLU_biomass,Biomass
+pPHE_biomass,Biomass
+pLEU_biomass,Biomass
+Xylan_biomass,Biomass
+Biomass_tx,Biomass
+K_biomass,Biomass
+sSUC_biomass,Biomass
+sCIT_biomass,Biomass
+Cellulose_biomass,Biomass
+FattyAcid_biomass,Biomass
+Mg_biomass,Biomass
+sMAL_biomass,Biomass
+Starch_biomass,Biomass
+sFUM_biomass,Biomass
+PYRUVATEORTHOPHOSPHATE_DIKINASE_RXN_c,C4/CAM photosynthetic carbon assimilation cycle
+1_PERIOD_2_PERIOD_1_PERIOD_13_RXN_p,Calvin-Benson-Bassham cycle
+SEDOBISALDOL_RXN_p,Calvin-Benson-Bassham cycle
+SEDOHEPTULOSE_BISPHOSPHATASE_RXN_p,Calvin-Benson-Bassham cycle
+GLYC3PDEHYDROGBIOSYN_RXN_c,CDP-diacylglycerol biosynthesis
+CELLULOSE_SYNTHASE_UDP_FORMING_RXN_c,cellulose biosynthesis
+SHIKIMATE_5_DEHYDROGENASE_RXN_p,chorismate biosynthesis
+DAHPSYN_RXN_p,chorismate biosynthesis
+CHORISMATE_SYNTHASE_RXN_p,chorismate biosynthesis
+SHIKIMATE_KINASE_RXN_p,chorismate biosynthesis
+3_DEHYDROQUINATE_SYNTHASE_RXN_p,chorismate biosynthesis
+3_DEHYDROQUINATE_DEHYDRATASE_RXN_p,chorismate biosynthesis
+2_PERIOD_5_PERIOD_1_PERIOD_19_RXN_p,chorismate biosynthesis
+ORNITHINE_GLU_AMINOTRANSFORASE_RXN_m,citrulline biosynthesis
+ORNCARBAMTRANSFER_RXN_p,citrulline degradation
+CONIFERIN_BETA_GLUCOSIDASE_RXN_c,coniferin metabolism
+2_PERIOD_4_PERIOD_1_PERIOD_111_RXN_c,coniferin metabolism
+RXN0_5224_c,C4/CAM photosynthetic carbon assimilation cycle
+RXN0_5224_p,C4/CAM photosynthetic carbon assimilation cycle
+SERINE_O_ACETTRAN_RXN_p,cysteine biosynthesis
+ACSERLY_RXN_p,cysteine biosynthesis
+2_PERIOD_3_PERIOD_1_PERIOD_180_RXN_p,fatty acid biosynthesis initiation
+ACETYL_COA_CARBOXYLTRANSFER_RXN_p,fatty acid biosynthesis initiation
+MALONYL_COA_ACP_TRANSACYL_RXN_p,fatty acid biosynthesis initiation
+FERRIC_CHELATE_REDUCTASE_RXN_c,Fe(III)-reduction and Fe(II) transport
+METHYLENETHFDEHYDROG_NADP_RXN_c,formylTHF biosynthesis
+METHENYLTHFCYCLOHYDRO_RXN_c,formylTHF biosynthesis
+GLYOHMETRANS_RXN_p,formylTHF biosynthesis
+GLYOHMETRANS_RXN_c,formylTHF biosynthesis
+GLYOHMETRANS_RXN_m,formylTHF biosynthesis
+GCVMULTI_RXN_m,formylTHF biosynthesis
+FORMYLTHFDEFORMYL_RXN_p,formylTHF biosynthesis
+HOMOCYSMETB12_RXN_c,formylTHF biosynthesis
+1_PERIOD_5_PERIOD_1_PERIOD_20_RXN_c,formylTHF biosynthesis
+HOMOCYSMETB12_RXN_p,formylTHF biosynthesis
+SUCROSE_SYNTHASE_RXN_c,sucrose degradation
+2_PERIOD_7_PERIOD_7_PERIOD_34_RXN_c,GDP-glucose biosynthesis
+2_PERIOD_7_PERIOD_7_PERIOD_13_RXN_c,GDP-mannose biosynthesis
+PGLUCISOM_RXN_p,GDP-mannose biosynthesis
+PGLUCISOM_RXN_c,GDP-mannose biosynthesis
+PEPCARBOX_RXN_c,C4/CAM photosynthetic carbon assimilation cycle
+MALIC_NADP_RXN_c,C4/CAM photosynthetic carbon assimilation cycle
+GLUTAMATE_SYNTHASE_FERREDOXIN_RXN_p,Nitrogen assimilation
+GLUTAMATE_SYNTHASE_NADH_RXN_p,Nitrogen assimilation
+GABATRANSAM_RXN_m,glutamate degradation
+RXN_6902_m,glutamate degradation
+SUCCINATE_SEMIALDEHYDE_DEHYDROGENASE_RXN_m,glutamate degradation
+GLUTDECARBOX_RXN_c,glutamate degradation
+THREONINE_ALDOLASE_RXN_c,glycine biosynthesis
+GLUCOKIN_RXN_c,glycolysis
+GLUCOKIN_RXN_p,glycogen degradation
+GLY3KIN_RXN_p,glycolate and glyoxylate degradation
+MALSYN_RXN_x,glycolate and glyoxylate degradation
+6PFRUCTPHOS_RXN_p,glycolysis
+PYRUVDEH_RXN_p,glycolysis
+F16ALDOLASE_RXN_p,glycolysis
+F16ALDOLASE_RXN_c,glycolysis
+2_PERIOD_7_PERIOD_1_PERIOD_90_RXN_c,glycolysis
+1_PERIOD_2_PERIOD_1_PERIOD_9_RXN_c,glycolysis
+6PFRUCTPHOS_RXN_c,glycolysis
+F16BDEPHOS_RXN_p,glycolysis
+F16BDEPHOS_RXN_c,glycolysis
+PYRUVDEH_RXN_m,glycolysis
+PHOSGLYPHOS_RXN_p,glycolysis
+PHOSGLYPHOS_RXN_c,glycolysis
+TRIOSEPISOMERIZATION_RXN_p,glycolysis
+GAPOXNPHOSPHN_RXN_c,glycolysis
+TRIOSEPISOMERIZATION_RXN_c,glycolysis
+GAPOXNPHOSPHN_RXN_p,glycolysis
+FUMHYDR_RXN_c,glyoxylate cycle
+FUMHYDR_RXN_m,Tricarboxylic acid cycle
+CITSYN_RXN_x,glyoxylate cycle
+CITSYN_RXN_m,Tricarboxylic acid cycle
+ISOCIT_CLEAV_RXN_x,glyoxylate cycle
+ACONITATEHYDR_RXN_m,Tricarboxylic acid cycle
+ACONITATEHYDR_RXN_c,glyoxylate cycle
+ACONITATEDEHYDR_RXN_m,Tricarboxylic acid cycle
+ACONITATEDEHYDR_RXN_c,glyoxylate cycle
+GDPKIN_RXN_p,guanosine nucleotides de novo biosynthesis
+GDPKIN_RXN_m,guanosine nucleotides de novo biosynthesis
+GDPKIN_RXN_c,guanosine nucleotides de novo biosynthesis
+PRIBFAICARPISOM_RXN_p,histidine biosynthesis
+ATPPHOSPHORIBOSYLTRANS_RXN_p,histidine biosynthesis
+HISTALDEHYD_RXN_p,histidine biosynthesis
+HISTCYCLOHYD_RXN_p,histidine biosynthesis
+IMIDPHOSDEHYD_RXN_p,histidine biosynthesis
+GLUTAMIDOTRANS_RXN_p,histidine biosynthesis
+HISTOLDEHYD_RXN_p,histidine biosynthesis
+HISTPRATPHYD_RXN_p,histidine biosynthesis
+HISTIDPHOS_RXN_p,histidine biosynthesis
+HISTAMINOTRANS_RXN_p,histidine biosynthesis
+CYSTAGLY_RXN_p,homocysteine and cysteine interconversion
+HOMOSERDEHYDROG_RXN_NAD_p,homoserine biosynthesis
+HOMOSERDEHYDROG_RXN_NADP_p,homoserine biosynthesis
+IMPCYCLOHYDROLASE_RXN_p,inosine-5'-phosphate biosynthesis
+AICARTRANSFORM_RXN_p,inosine-5'-phosphate biosynthesis
+Glycolate_pc,Intracellular transport
+NH3_pc,Intracellular transport
+CIT_PROTON_vc,Intracellular transport
+PYRUVATE_pc,Intracellular transport
+TYR_pc,Intracellular transport
+THF_pc,Intracellular transport
+ILE_pc,Intracellular transport
+SUCROSE_PROTON_vc,Intracellular transport
+LYS_pc,Intracellular transport
+SER_xc,Intracellular transport
+X5P_Pi_pc,Intracellular transport
+O2_pc,Intracellular transport
+SO4_pc,Intracellular transport
+MAL_PROTON_vc,Intracellular transport
+CO2_mc,Intracellular transport
+SER_mc,Intracellular transport
+NH3_mc,Intracellular transport
+O2_mc,Intracellular transport
+VAL_pc,Intracellular transport
+H2O_tx,Intracellular transport
+NITRATE_vc,Intracellular transport
+CO2_tx,Intracellular transport
+HIS_ORNITHINE_mc,Intracellular transport
+ATP_ADP_mc,Intracellular transport
+GLY_mc,Intracellular transport
+CIT_ISOCITRATE_mc,Intracellular transport
+CIT_ACONITATE_mc,Intracellular transport
+SUC_SO4_mc,Intracellular transport
+ISOCITRATE_ACONITATE_mc,Intracellular transport
+AMP_pc,Intracellular transport
+GLN_GLU_pc,Intracellular transport
+MAL_CIT_mc,Intracellular transport
+OAA_SO4_mc,Intracellular transport
+MAL_SUC_mc,Intracellular transport
+OAA_SUC_mc,Intracellular transport
+2KG_OAA_mc,Intracellular transport
+L_ASPARTATE_xc,Intracellular transport
+2KG_CIT_mc,Intracellular transport
+GAP_3PGA_pc,Intracellular transport
+FORMATE_pc,Intracellular transport
+OAA_Pi_mc,Intracellular transport
+2KG_MAL_mc,Intracellular transport
+NITRITE_pc,Intracellular transport
+METHYLENE_THF_pc,Intracellular transport
+PHE_pc,Intracellular transport
+FUM_PROTON_vc,Intracellular transport
+2_KETOGLUTARATE_xc,Intracellular transport
+L_ASPARTATE_GLU_mc,Intracellular transport
+CA2_rev_vc,Intracellular transport
+SUC_xc,Intracellular transport
+2KG_MAL_pc,Intracellular transport
+5_METHYL_THF_pc,Intracellular transport
+DHAP_Pi_pc,Intracellular transport
+H2O_mc,Intracellular transport
+SUC_CIT_mc,Intracellular transport
+CO2_pc,Intracellular transport
+GLT_MAL_pc,Intracellular transport
+H_cm,Intracellular transport
+SUC_ISOCITRATE_mc,Intracellular transport
+O2_xc,Intracellular transport
+ORNITHINE_CITRULLINE_pc,Intracellular transport
+G6P_Pi_pc,Intracellular transport
+L_ASPARTATE_pc,Intracellular transport
+Pi_PROTON_mc,Intracellular transport
+OAA_xc,Intracellular transport
+MAL_ISOCITRATE_mc,Intracellular transport
+THR_pc,Intracellular transport
+CIT_xc,Intracellular transport
+ATP_AMP_mc,Intracellular transport
+Glycolate_xc,Intracellular transport
+PRO_GLU_mc,Intracellular transport
+ATP_pc,Intracellular transport
+H2O_pc,Intracellular transport
+GLT_xc,Intracellular transport
+ACET_mc,Intracellular transport
+FORMATE_mc,Intracellular transport
+H_pc,Intracellular transport
+FRU_PROTON_rev_vc,Intracellular transport
+SUCROSE_rev_vc,Intracellular transport
+PEP_Pi_pc,Intracellular transport
+THREO_DS_ISO_CITRATE_xc,Intracellular transport
+OAA_ISOCITRATE_mc,Intracellular transport
+SUC_Pi_mc,Intracellular transport
+GLY_xc,Intracellular transport
+SUC_FUM_mc,Intracellular transport
+DHAP_3PGA_pc,Intracellular transport
+MG2_rev_vc,Intracellular transport
+GAP_Pi_pc,Intracellular transport
+3PGA_Pi_pc,Intracellular transport
+MAL_SO4_mc,Intracellular transport
+THF_mc,Intracellular transport
+SUC_ACONITATE_mc,Intracellular transport
+2KG_ISOCITRATE_mc,Intracellular transport
+ARG_HIS_mc,Intracellular transport
+PYRUVATE_PROTON_mc,Intracellular transport
+ARG_CITRULLINE_mc,Intracellular transport
+ARG_ORNITHINE_mc,Intracellular transport
+ACET_xc,Intracellular transport
+ORNITHINE_CITRULLINE_mc,Intracellular transport
+L_CITRULLINE_pc,Intracellular transport
+GLC_vc,Intracellular transport
+NITRATE_PROTON_rev_vc,Intracellular transport
+MAL_Pi_mc,Intracellular transport
+NADPHoxp_tx,maintenance
+H2O_xc,Intracellular transport
+10_FORMYL_THF_pc,Intracellular transport
+OAA_CIT_mc,Intracellular transport
+GLC_PROTON_rev_vc,Intracellular transport
+FUM_pc,Intracellular transport
+PROTONATP_rev_vc,Intracellular transport
+HIS_CITRULLINE_mc,Intracellular transport
+H_xc,Intracellular transport
+Pi_PROTON_pc,Intracellular transport
+ATP_ADP_Pi_pc,Intracellular transport
+K_rev_vc,Intracellular transport
+ADP_pc,Intracellular transport
+FRU_vc,Intracellular transport
+OAA_ACONITATE_mc,Intracellular transport
+SER_pc,Intracellular transport
+GLY_pc,Intracellular transport
+ARG_mc,Intracellular transport
+ARG_LYS_mc,Intracellular transport
+GLN_GLU_mc,Intracellular transport
+Glycerate_xc,photorespiration
+GLC_pc,Intracellular transport
+LYS_ORNITHINE_mc,Intracellular transport
+PALMITATE_pc,Intracellular transport
+2KG_SUC_mc,Intracellular transport
+METHYLENE_THF_mc,Intracellular transport
+PROTON_PPi_rev_vc,Intracellular transport
+4_AMINO_BUTYRATE_mc,Intracellular transport
+MAL_ACONITATE_mc,Intracellular transport
+HIS_pc,Intracellular transport
+MAL_xc,Intracellular transport
+MET_pc,Intracellular transport
+ACET_pc,Intracellular transport
+LEU_pc,Intracellular transport
+GLYCERATE_pc,Intracellular transport
+AMP_ATP_xc,Intracellular transport
+2KG_ACONITATE_mc,Intracellular transport
+PRO_mc,Intracellular transport
+ACETALD_mc,Intracellular transport
+Pi_xc,Intracellular transport
+HOMO_CYS_pc,Intracellular transport
+ACETOOHBUTSYN_RXN_p,isoleucine biosynthesis
+ACETOOHBUTREDUCTOISOM_RXN_p,isoleucine biosynthesis
+DIHYDROXYMETVALDEHYDRAT_RXN_p,isoleucine biosynthesis
+THREDEHYD_RXN_p,isoleucine biosynthesis
+BRANCHED_CHAINAMINOTRANSFERILEU_RXN_p,isoleucine biosynthesis
+RXN_7800_p,leucine biosynthesis
+RXN_8991_p,leucine biosynthesis
+2_ISOPROPYLMALATESYN_RXN_p,leucine biosynthesis
+3_ISOPROPYLMALDEHYDROG_RXN_p,leucine biosynthesis
+3_ISOPROPYLMALISOM_RXN_p,leucine biosynthesis
+BRANCHED_CHAINAMINOTRANSFERLEU_RXN_p,leucine degradation
+DIHYDROPICRED_RXN_NAD_p,lysine biosynthesis
+DIAMINOPIMDECARB_RXN_p,lysine biosynthesis
+ASPARTATEKIN_RXN_p,lysine biosynthesis
+ASPARTATE_SEMIALDEHYDE_DEHYDROGENASE_RXN_p,lysine biosynthesis
+DIAMINOPIMEPIM_RXN_p,lysine biosynthesis
+DIHYDRODIPICSYN_RXN_p,lysine biosynthesis
+DIHYDROPICRED_RXN_NADP_p,lysine biosynthesis
+RXN_7737_p,lysine biosynthesis
+Protein_Processing_c,Maintenance
+Protein_Polymerisation_c,Maintenance
+Protein_Translocation_c,Maintenance
+OAA_MAL_mc,Malate valve
+MALATE_DEHYDROGENASE_NADPs_RXN_p,Malate valve
+OAA_MAL_pc,Malate valve
+CYSPH_RXN_p,methionine biosynthesis
+CYSTATHIONINE_BETA_LYASE_RXN_p,methionine biosynthesis
+H_im,Mitochondrial electron transport chain
+NADH_DEHYDROG_A_RXN_mi,Mitochondrial electron transport chain
+RXN_6884_m,Mitochondrial electron transport chain
+CYTOCHROME_C_OXIDASE_RXN_mi,Mitochondrial electron transport chain
+CYTOCHROME_C_OXIDASE_RXN_mc,Mitochondrial electron transport chain
+1_PERIOD_10_PERIOD_2_PERIOD_2_RXN_mc,Mitochondrial electron transport chain
+RXN_6883_m,Mitochondrial electron transport chain
+1_PERIOD_10_PERIOD_2_PERIOD_2_RXN_mi,Mitochondrial electron transport chain
+NADH_DEHYDROG_A_RXN_mc,Mitochondrial electron transport chain
+SUCCINATE_DEHYDROGENASE_UBIQUINONE_RXN_mi,Mitochondrial electron transport chain
+SUCCINATE_DEHYDROGENASE_UBIQUINONE_RXN_mc,Mitochondrial electron transport chain
+Mitochondrial_ATP_Synthase_m,Mitochondrial electron transport chain
+MYO_INOSITOL_1_PHOSPHATE_SYNTHASE_RXN_c,myo-inositol biosynthesis
+MYO_INOSITOL_1OR_4_MONOPHOSPHATASE_RXN_c,myo-inositol biosynthesis
+INORGPYROPHOSPHAT_RXN_c,NA
+INORGPYROPHOSPHAT_RXN_p,NA
+INORGPYROPHOSPHAT_RXN_x,NA
+RXN0_5330_NAD_mc,Mitochondrial electron transport chain
+RXN0_5330_NAD_mi,Mitochondrial electron transport chain
+SERINE_GLYOXYLATE_AMINOTRANSFERASE_RXN_x,photorespiration
+RXN_9651_p,NA
+RXN_9654_p,NA
+MALTODEXGLUCOSID_RXN_p,starch degradation
+RXN_9648_p,NA
+RXN0_5260_m,NA
+RXN_9653_p,NA
+CELLULOSE_SYNTHASE_GDP_FORMING_RXN_c,NA
+RXN0_5330_NADP_m,NA
+RXN_9650_p,NA
+RXN_9652_p,NA
+GLUCISOM_RXN_c,NA
+RXN_8001_p,NA
+RXN0_1483_c,NA
+SUCCINYL_COA_HYDROLASE_RXN_m,Tricarboxylic acid cycle
+NADH_KINASE_RXN_c,NAD/NADH phosphorylation and dephosphorylation
+NADPPHOSPHAT_RXN_c,NAD/NADH phosphorylation and dephosphorylation
+FERREDOXIN_NITRITE_REDUCTASE_RXN_c,Nitrogen assimilation
+NITRATE_REDUCTASE_NADH_RXN_c,Nitrogen assimilation
+GLUTAMINESYN_RXN_p,Nitrogen assimilation
+GLUTAMINESYN_RXN_c,Nitrogen assimilation
+GLUTAMINESYN_RXN_m,Nitrogen assimilation
+O2_tx,Nutrient uptake
+K_tx,Nutrient uptake
+Mg_tx,Nutrient uptake
+GLC_tx,Nutrient uptake
+NH4_tx,Nutrient uptake
+Nitrate_tx,Nutrient uptake
+SO4_tx,Nutrient uptake
+Sucrose_tx,Nutrient uptake
+NADPHoxm_tx,Maintenance
+NADPHoxc_tx,Maintenance
+Photon_tx,Nutrient uptake
+Ca_tx,Nutrient uptake
+ATPase_tx,Maintenance
+RXN66_1_c,oxidative ethanol degradation
+RXN66_3_m,oxidative ethanol degradation
+RXN66_3_c,oxidative ethanol degradation
+RXN_9528_p,palmitate biosynthesis
+RXN_9655_p,palmitate biosynthesis
+4_PERIOD_2_PERIOD_1_PERIOD_61_RXN_p,palmitate biosynthesis
+RXN_9524_p,palmitate biosynthesis
+RXN_9657_p,palmitate biosynthesis
+RXN_9662_p,palmitate biosynthesis
+RXN_9520_p,palmitate biosynthesis
+4_PERIOD_2_PERIOD_1_PERIOD_58_RXN_p,palmitate biosynthesis
+RXN_9661_p,palmitate biosynthesis
+RXN_9549_p,palmitate biosynthesis
+RXN_9539_p,palmitate biosynthesis
+RXN_9535_p,palmitate biosynthesis
+RXN_9537_p,palmitate biosynthesis
+RXN_9531_p,palmitate biosynthesis
+RXN_9533_p,palmitate biosynthesis
+RXN_9660_p,palmitate biosynthesis
+RXN_9659_p,palmitate biosynthesis
+RXN_9540_p,palmitate biosynthesis
+RXN_9514_p,palmitate biosynthesis
+4_PERIOD_2_PERIOD_1_PERIOD_59_RXN_p,palmitate biosynthesis
+RXN_9536_p,palmitate biosynthesis
+RXN_9532_p,palmitate biosynthesis
+RXN_9518_p,palmitate biosynthesis
+RXN_9663_p,palmitate biosynthesis
+RXN_9516_p,palmitate biosynthesis
+RXN_9658_p,palmitate biosynthesis
+RXN_9527_p,palmitate biosynthesis
+RXN_9523_p,palmitate biosynthesis
+RIB5PISOM_RXN_p,Pentose phosphate pathway
+2TRANSKETO_RXN_p,Pentose phosphate pathway
+RIBULP3EPIM_RXN_p,Pentose phosphate pathway
+6PGLUCONOLACT_RXN_p,Pentose phosphate pathway
+6PGLUCONOLACT_RXN_c,Pentose phosphate pathway
+GLU6PDEHYDROG_RXN_c,Pentose phosphate pathway
+GLU6PDEHYDROG_RXN_p,Pentose phosphate pathway
+1TRANSKETO_RXN_p,Pentose phosphate pathway
+TRANSALDOL_RXN_p,Pentose phosphate pathway
+6PGLUCONDEHYDROG_RXN_c,Pentose phosphate pathway
+6PGLUCONDEHYDROG_RXN_p,Pentose phosphate pathway
+RIBULP3EPIM_RXN_c,Pentose phosphate pathway
+RXN_10745_NAD_c,Peroxide formation
+PREPHENATE_TRANSAMINE_RXN_p,phenylalanine biosynthesis
+CHORISMATEMUT_RXN_p,phenylalanine biosynthesis
+CARBOXYCYCLOHEXADIENYL_DEHYDRATASE_RXN_p,phenylalanine biosynthesis
+PRPPSYN_RXN_p,Phosphoribosyl pyrophosphate biosynthesis
+RXN_969_x,photorespiration
+RXN_961_p,photorespiration
+GLYCINE_AMINOTRANSFERASE_RXN_x,photorespiration
+GPH_RXN_p,photorespiration
+Plastoquinol_Oxidase_p,Photosynthesis
+PLASTOQUINOL_PLASTOCYANIN_REDUCTASE_RXN_p,Photosynthesis
+PSII_RXN_p,Photosynthesis
+RXN490_3650_p,Photosynthesis
+1_PERIOD_18_PERIOD_1_PERIOD_2_RXN_p,Photosynthesis
+Plastidial_ATP_Synthase_p,Photosynthesis
+Ferredoxin_Plastoquinone_Reductase_p,Photosynthesis
+NADPH_Dehydrogenase_p,Photosynthesis
+SPONTPRO_RXN_m,proline biosynthesis
+RXN_7183_NADP_m,proline degradation
+1_PERIOD_2_PERIOD_1_PERIOD_2_RXN_m,purine degradation
+1_PERIOD_2_PERIOD_1_PERIOD_2_RXN_p,purine degradation
+UDPKIN_RXN_c,pyrimidine ribonucleotides interconversion
+ALCOHOL_DEHYDROG_RXN_c,pyruvate fermentation
+CATAL_RXN_x,removal of superoxide radicals
+SUPEROX_DISMUT_RXN_c,removal of superoxide radicals
+2PGADEHYDRAT_RXN_c,glycolysis
+2PGADEHYDRAT_RXN_p,Rubisco shunt
+PHOSPHORIBULOKINASE_RXN_p,Rubisco shunt
+3PGAREARR_RXN_p,Rubisco shunt
+3PGAREARR_RXN_c,glycolysis
+RIBULOSE_BISPHOSPHATE_CARBOXYLASE_RXN_p,Rubisco shunt
+PEPDEPHOS_RXN_c,glycolysis
+PEPDEPHOS_RXN_p,Rubisco shunt
+PSERTRANSAM_RXN_p,serine biosynthesis
+PGLYCDEHYDROG_RXN_p,serine biosynthesis
+RXN0_5114_p,serine biosynthesis
+GLYCOGENSYN_RXN_p,starch biosynthesis
+GLUC1PADENYLTRANS_RXN_p,starch biosynthesis
+RXN_2141_p,starch degradation
+RXN_1827_p,starch degradation
+SUCROSE_PHOSPHATE_SYNTHASE_RXN_c,sucrose biosynthesis
+SUCROSE_PHOSPHATASE_RXN_c,sucrose biosynthesis
+GLUC1PURIDYLTRANS_RXN_c,sucrose biosynthesis
+PHOSPHOGLUCMUT_RXN_p,sucrose biosynthesis
+PHOSPHOGLUCMUT_RXN_c,sucrose biosynthesis
+FRUCTOKINASE_RXN_c,sucrose degradation
+RXN_1461_c,sucrose degradation
+SULFITE_REDUCTASE_FERREDOXIN_RXN_p,sulfate reduction
+SULFATE_ADENYLYLTRANS_RXN_p,sulfate reduction
+1_PERIOD_8_PERIOD_4_PERIOD_9_RXN_p,sulfate reduction
+GLURS_RXN_c,tetrapyrrole biosynthesis
+HOMOSERKIN_RXN_p,threonine biosynthesis from homoserine
+THRESYN_RXN_p,threonine biosynthesis from homoserine
+ISOCITDEH_RXN_m,Tricarboxylic acid cycle
+ISOCITDEH_RXN_c,Tricarboxylic acid cycle
+2OXOGLUTARATEDEH_RXN_m,Tricarboxylic acid cycle
+ISOCITRATE_DEHYDROGENASE_NAD_RXN_m,Tricarboxylic acid cycle
+SUCCCOASYN_RXN_m,Tricarboxylic acid cycle
+THREONINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+ASPARAGINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+SERINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+HISTIDINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+GLYCINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+GLUTAMINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+ASPARTATE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+TYROSINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+LYSINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+ARGININE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+ALANINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+PHENYLALANINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+LEUCINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+METHIONINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+VALINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+ISOLEUCINE_TRNA_LIGASE_RXN_c,tRNA charging pathway
+RXN_5682_p,tyrosine biosynthesis
+PREPHENATEDEHYDROG_RXN_p,tyrosine biosynthesis
+TYRAMINOTRANS_RXN_p,tyrosine degradation
+2_PERIOD_7_PERIOD_7_PERIOD_44_RXN_c,UDP-D-glucuronate biosynthesis
+MYO_INOSITOL_OXYGENASE_RXN_c,UDP-D-glucuronate biosynthesis
+GLUCURONOKINASE_RXN_c,UDP-D-glucuronate biosynthesis
+UDP_GLUCURONATE_DECARBOXYLASE_RXN_c,UDP-D-xylose biosynthesis
+UGD_RXN_c,UDP-D-xylose biosynthesis
+ARGSUCCINLYA_RXN_c,urea cycle
+6_PERIOD_3_PERIOD_4_PERIOD_16_RXN_p,urea cycle
+ARGSUCCINSYN_RXN_c,urea cycle
+ACETOLACTREDUCTOISOM_RXN_p,valine biosynthesis
+DIHYDROXYISOVALDEHYDRAT_RXN_p,valine biosynthesis
+ACETOLACTSYN_RXN_p,valine biosynthesis
+BRANCHED_CHAINAMINOTRANSFERVAL_RXN_p,valine degradation
+RXN_3521_p,Water-Water cycle
+L_ASCORBATE_PEROXIDASE_RXN_p,Water-Water cycle
+SUPEROX_DISMUT_RXN_p,Water-Water cycle
+Mehler_Reaction_p,Water-Water cycle
+RXN_9104_c,xylan biosynthesis
+Pi_tx,Nutrient uptake
+PREPHENATE_DEHYDROGENASE_NADP_RXN_p,NA
+PROTON_ATPase_c,maintenance
+ALANINE_GLYOXYLATE_AMINOTRANSFERASE_RXN_x,NA
+MANNPGUANYLTRANGDP_RXN_c,Mannan biosynthesis
+H_tx,NA
+HYDROXYPYRUVATE_REDUCTASE_RXN_NAD_x,photorespiration
+SUCCINATE_COA_LIGASE_GDP_FORMING_RXN_m,Tricarboxylic acid cycle
+RXN_10786_c,cellulose biosynthesis
+RXN_12541_c,NA
+GLYCERATE_GLYCOLLATE_pc,photorespiration
+1_PERIOD_1_PERDIOD_1_PERIOD_255_RXN_c,Mannan biosynthesis
+ACSERLY_RXN_c,cysteine biosynthesis
+ALANINE_GLYOXYLATE_AMINOTRANSFERASE_RXN_x,NA
+ANTHRANSYN_RXN_p,Tryptophan biosynthesis
+ATP_CITRATE_PRO_S_LYASE_RXN_c,cysteine biosynthesis
+CARBAMATE_KINASE_RXN_p,Carbamoyl-P cycle
+FERREDOXIN_NITRITE_REDUCTASE_RXN_p,Nitrogen assimilation
+FORMATETHFLIG_RXN_p,NA
+GLUTATHIONE_PEROXIDASE_RXN_p,NA
+GLUTKIN_RXN_c,proline biosynthesis
+GLUTSEMIALDEHYDRROG_RXN_c,proline biosynthesis
+HEXOKINASE_RXN_MANNOSE_c,Mannan biosynthesis
+HS_pc,Intracellular transport
+IGPSYN_RXN_p,Tryptophan biosynthesis
+MALIC_NAD_RXN_m,C4/CAM photosynthetic carbon assimilation cycle
+MALIC_NADP_RXN_p,C4/CAM photosynthetic carbon assimilation cycle
+MALTODEG_RXN_c,starch degradation
+MANNITOL_1_PHOSPHATE_RXN_c,Mannan biosynthesis
+MANNOSE_6_PHOSPHATE_6_REDUCTASE_RXN_c,Mannan biosynthesis
+MANNPGUANYLTRANGDP_RXN_c,Mannan biosynthesis
+MANNPISOM_RXN_c,Mannan biosynthesis
+MDA_Fd_Ascorbate_p,Water-Water cycle
+PEPCARBOXYKIN_RXN_c,C4/CAM photosynthetic carbon assimilation cycle
+PRAISOM_RXN_p,Tryptophan biosynthesis
+PREPHENATE_DEHYDROGENASE_NADP_RXN_p,tyrosine biosynthesis
+PRTRANS_RXN_p,Tryptophan biosynthesis
+PYRROLINECARBREDUCT_RXN_NAD_c,proline biosynthesis
+PYRROLINECARBREDUCT_RXN_NADP_c,proline biosynthesis
+PYRUVATEORTHOPHOSPHATE_DIKINASE_RXN_p,gluconeogenesis
