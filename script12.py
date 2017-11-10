@@ -533,25 +533,25 @@ ratio = predictSucPercent(CAM_model_pH_default)
 #ratio = 20
 CAM_model_pH_1 = CAM_model_pH.copy()
 for i in range(1,3):
-  CAM_model_pH_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.6757,CAM_model_pH_1.metabolites.get_by_id("PROTON_e"+str(i)):0.6757,CAM_model_pH_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.6757})
+  CAM_model_pH_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.505,CAM_model_pH_1.metabolites.get_by_id("PROTON_e"+str(i)):0.505,CAM_model_pH_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.505})
 
 
 CAM_model_pH_1.reactions.get_by_id("ATPase_tx2").lower_bound=9.2
 CAM_model_pH_1.reactions.get_by_id("ATPase_tx2").upper_bound=9.2
 solution=flux_analysis.parsimonious.optimize_minimal_flux(CAM_model_pH_1)
-#check suc:aa ratio
+#check suc %
 predictSucPercent(CAM_model_pH_1)
 
 #ratio = 10
 CAM_model_pH_10 = CAM_model_pH.copy()
 for i in range(1,3):
-  CAM_model_pH_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-1.55,CAM_model_pH_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.55,CAM_model_pH_10.metabolites.get_by_id("PROTON_c"+str(i)):1.55})
+  CAM_model_pH_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-1.32,CAM_model_pH_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.32,CAM_model_pH_10.metabolites.get_by_id("PROTON_c"+str(i)):1.32})
 
 CAM_model_pH_10.reactions.get_by_id("ATPase_tx2").lower_bound=8.3
 CAM_model_pH_10.reactions.get_by_id("ATPase_tx2").upper_bound=8.3
 solution=flux_analysis.parsimonious.optimize_minimal_flux(CAM_model_pH_10)
-#check suc:aa ratio
-predictSucAAratio(CAM_model_pH_10)
+#check suc %
+predictSucPercent(CAM_model_pH_10)
 
 
 ########################### SETUP C3 LEAF #####################################################
@@ -661,7 +661,7 @@ solution=flux_analysis.parsimonious.optimize_minimal_flux(C3_model_default)
 #sucrose = 50% phloem
 C3_model_1 = C3_model.copy()
 for i in range(1,3):
-  C3_model_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.5,C3_model_1.metabolites.get_by_id("PROTON_e"+str(i)):0.5,C3_model_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.5})
+  C3_model_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.505,C3_model_1.metabolites.get_by_id("PROTON_e"+str(i)):0.505,C3_model_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.505})
 
 
 C3_model_1.reactions.get_by_id("ATPase_tx2").lower_bound=9.2
@@ -673,7 +673,7 @@ predictSucAAratio(C3_model_1)
 #sucrose = 90% phloem
 C3_model_10 = C3_model.copy()
 for i in range(1,3):
-  C3_model_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-1.55,C3_model_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.55,C3_model_10.metabolites.get_by_id("PROTON_c"+str(i)):1.55})
+  C3_model_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-1.32,C3_model_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.32,C3_model_10.metabolites.get_by_id("PROTON_c"+str(i)):1.32})
 
 C3_model_10.reactions.get_by_id("ATPase_tx2").lower_bound=8.3
 C3_model_10.reactions.get_by_id("ATPase_tx2").upper_bound=8.3
@@ -849,7 +849,7 @@ plt.rcParams['xtick.major.width'] = 1
 plt.rcParams['ytick.major.size'] = 5
 plt.rcParams['ytick.major.width'] = 1
 plt.rcParams['axes.linewidth']=3 # makes axes line thicker
-#plt.figure(figsize=(5,15))
+plt.figure(figsize=(10,8))
 
 xvalues=list()
 xvalues2=list()
@@ -866,9 +866,9 @@ for k in sorted(ansA.keys()):
   yvalues3.append(ansA_2.get(k))
 
 curve = plt.subplot(111)
-curve.plot(xvalues2,yvalues,marker="o",label="CAM Phloem SUC:A.A = 3.2",color="green")
-curve.plot(xvalues2,yvalues2,marker="o",label="CAM Phloem SUC:A.A = 1",color="red")
-curve.plot(xvalues2,yvalues3,marker="o",label="CAM Phleom SUC:A.A = 10",color="blue")
+curve.plot(xvalues2,yvalues,marker="o",label="CAM 76% sucrose phloem",color="green")
+curve.plot(xvalues2,yvalues2,marker="o",label="CAM 50% sucrose phloem",color="red")
+curve.plot(xvalues2,yvalues3,marker="o",label="CAM 90% sucrose phloem",color="blue")
 curve.axvspan(np.log(float(1)/0.33),np.log(float(1)/0.14),alpha=0.3,color="green")
 curve.plot(xvalues2[1],convertOut2Cout(C3_model_default,C3_model_default.solution.f)*12*60*60/1000,marker="s",markersize=10,color="green")
 curve.axhline(y=convertOut2Cout(C3_model_default,C3_model_default.solution.f)*12*60*60/1000,ls="--",alpha=0.3,color="green")
@@ -886,4 +886,3 @@ curve.set_ylabel("Phloem output ("+r'$mmolC.m^{-2}.d^{-1}$'+")",fontsize=20)
 plt.legend(loc="best")
 #plt.legend(bbox_to_anchor = (2.2,1.03))
 plt.show()
-
