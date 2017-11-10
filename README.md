@@ -15,7 +15,7 @@ a) using the command `python scriptname.py` where scriptname.py is the filename 
   OR
 </p>
 <p>
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp b) Enter python terminal using the command `python` and copy paste script contents to the python terminal
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp b) Enter python terminal using the command "python" and copy paste script contents to the python terminal
 </p>
 
   
