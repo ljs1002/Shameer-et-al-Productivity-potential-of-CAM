@@ -1,6 +1,6 @@
 #########################################################################
-#This script can be used to estimate NGAM when 50% of phloem is sucrose	#
-#growth condition based on the assumption that carbon conversion 	#
+#This script can be used to estimate NGAM when sugar:amino acids ratio	#
+# in the phloem is 0.50 based on the assumption that carbon conversion 	#
 #efficiency (CCE) of night time metaoblism is 50%			#
 #									#
 #########################################################################
@@ -21,7 +21,7 @@ def predictCCE(C3_model):
       for met in rxn.products:
         print met
         if met.formula.__contains__("C"):
-          #print str(Cin)+"---"+met.id
+          print str(Cin)+"---"+met.id
           print str(rxn.x)+"\t"+str(rxn.metabolites.get(met))+"\t"+str(int(re.split(r"[C,H]",met.formula)[1]))
           Cin = Cin + (rxn.x * rxn.metabolites.get(met) * int(re.split(r"[C,H]",met.formula)[1]))
   
@@ -230,9 +230,9 @@ cobra_model.reactions.get_by_id("Biomass_tx1").upper_bound=0
 cobra_model.reactions.get_by_id("Biomass_tx2").lower_bound=0
 cobra_model.reactions.get_by_id("Biomass_tx2").upper_bound=0
 
-#constrain sucrose to be 50% of the phloem
+#constrain sugar:aa to be 0.50
 for i in range(1,3):
-  cobra_model.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({cobra_model.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.505,cobra_model.metabolites.get_by_id("PROTON_e"+str(i)):0.505,cobra_model.metabolites.get_by_id("PROTON_c"+str(i)):-0.505})
+  cobra_model.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({cobra_model.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.6658,cobra_model.metabolites.get_by_id("GLC_c"+str(i)):0.06295,cobra_model.metabolites.get_by_id("FRU_c"+str(i)):0.072,cobra_model.metabolites.get_by_id("PROTON_e"+str(i)):0.80075,cobra_model.metabolites.get_by_id("PROTON_c"+str(i)):-0.80075})
 
 
 
