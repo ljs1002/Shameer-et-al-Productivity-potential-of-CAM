@@ -1,9 +1,10 @@
 #########################################################################
 #This script can be used to estimate NGAM when sugar:amino acids ratio	#
-# in the phloem is 50% based on the assumption that carbon conversion 	#
+# in the phloem is 0.70 based on the assumption that carbon conversion 	#
 #efficiency (CCE) of night time metaoblism is 50%			#
 #									#
 #########################################################################
+
 
 
 ########################## FUNCTIONS ####################################
