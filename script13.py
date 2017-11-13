@@ -34,7 +34,6 @@ def predictSucAAratio(model):
   return float(s)/n
 
 
-
 #a function to calculate % of sucrose in phloem
 def predictSucPercent(model):
   n=0
@@ -48,6 +47,36 @@ def predictSucPercent(model):
     else:
       n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
   return float(s)/n*100
+
+
+#a function to calculate Sucrose to AA ratio
+def predictSugAAratio(model):
+  n=0
+  s=0
+  for met in model.reactions.get_by_id("Phloem_output_tx1").metabolites:
+    if met.id == "X_Phloem_contribution_t1":
+      continue
+    elif met.id == "sSUCROSE_b1" or met.id=="GLC_c1" or met.id=="FRU_c1":
+      s = s + model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+    else:
+      n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+  return float(s)/n
+
+
+#a function to calculate % of sucrose in phloem
+def predictAAPercent(model):
+  n=0
+  a=0
+  for met in model.reactions.get_by_id("Phloem_output_tx1").metabolites:
+    if met.id == "X_Phloem_contribution_t1":
+      continue
+    elif met.id == "sSUCROSE_b1" or met.id == "GLC_c1" or met.id == "FRU_c1":
+      n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+    else:
+      a = a+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+      n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+  return float(a)/n*100
+
 
 
 
@@ -530,28 +559,78 @@ solution=flux_analysis.parsimonious.optimize_minimal_flux(CAM_model_pH_default)
 #check ratio
 ratio = predictSucPercent(CAM_model_pH_default)
 
-#ratio = 20
+
+def printSucGlcFrRatio(model):
+  n=0
+  s=0
+  g=0
+  f=0
+  for met in model.reactions.get_by_id("Phloem_output_tx1").metabolites:
+    if met.id == "X_Phloem_contribution_t1":
+      continue
+    elif met.id == "sSUCROSE_b1":
+      s = model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+      n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+    elif met.id == "GLC_c1":
+      g = model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+      n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+    elif met.id == "FRU_c1":
+      f = model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+      n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+    else:
+      n = n+model.reactions.get_by_id("Phloem_output_tx1").metabolites.get(met)
+  print(s)
+  print(g)
+  print(f)
+  print("SUG:AA="+str(float(s+f+g)/n))
+  print("GLC:SUC="+str(float(g/s)))
+  print("FRU:SUC="+str(float(f/s)))
+  print("SUC/AA ="+str(abs(s+f+g))+"/"+str(abs(n-s-f-g)))
+
+
+
+
+
+
+
+#ratio = 0.5
 CAM_model_pH_1 = CAM_model_pH.copy()
 for i in range(1,3):
-  CAM_model_pH_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.505,CAM_model_pH_1.metabolites.get_by_id("PROTON_e"+str(i)):0.505,CAM_model_pH_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.505})
+  CAM_model_pH_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.6658,CAM_model_pH_1.metabolites.get_by_id("GLC_c"+str(i)):0.06295,CAM_model_pH_1.metabolites.get_by_id("FRU_c"+str(i)):0.072,CAM_model_pH_1.metabolites.get_by_id("PROTON_e"+str(i)):0.80075,CAM_model_pH_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.80075})
 
 
-CAM_model_pH_1.reactions.get_by_id("ATPase_tx2").lower_bound=9.2
-CAM_model_pH_1.reactions.get_by_id("ATPase_tx2").upper_bound=9.2
+
+
+CAM_model_pH_1.reactions.get_by_id("ATPase_tx2").lower_bound=10.9
+CAM_model_pH_1.reactions.get_by_id("ATPase_tx2").upper_bound=10.9
 solution=flux_analysis.parsimonious.optimize_minimal_flux(CAM_model_pH_1)
 #check suc %
-predictSucPercent(CAM_model_pH_1)
+printSucGlcFrRatio(CAM_model_pH_1)
 
-#ratio = 10
+#ratio = 0.75
+CAM_model_pH_31 = CAM_model_pH.copy()
+for i in range(1,3):
+  CAM_model_pH_31.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_31.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.579,CAM_model_pH_31.metabolites.get_by_id("GLC_c"+str(i)):0.0547,CAM_model_pH_31.metabolites.get_by_id("FRU_c"+str(i)):0.0627,CAM_model_pH_31.metabolites.get_by_id("PROTON_e"+str(i)):0.6964,CAM_model_pH_31.metabolites.get_by_id("PROTON_c"+str(i)):-0.6964})
+
+CAM_model_pH_31.reactions.get_by_id("ATPase_tx2").lower_bound=9.8
+CAM_model_pH_31.reactions.get_by_id("ATPase_tx2").upper_bound=9.8
+solution=flux_analysis.parsimonious.optimize_minimal_flux(CAM_model_pH_31)
+#check suc %
+printSucGlcFrRatio(CAM_model_pH_31)
+
+
+
+
+#ratio = 0.99
 CAM_model_pH_10 = CAM_model_pH.copy()
 for i in range(1,3):
-  CAM_model_pH_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-1.32,CAM_model_pH_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.32,CAM_model_pH_10.metabolites.get_by_id("PROTON_c"+str(i)):1.32})
+  CAM_model_pH_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({CAM_model_pH_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-6,CAM_model_pH_10.metabolites.get_by_id("GLC_c"+str(i)):-0.57,CAM_model_pH_10.metabolites.get_by_id("FRU_c"+str(i)):-0.65,CAM_model_pH_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.32,CAM_model_pH_10.metabolites.get_by_id("PROTON_c"+str(i)):1.32})
 
 CAM_model_pH_10.reactions.get_by_id("ATPase_tx2").lower_bound=8.3
 CAM_model_pH_10.reactions.get_by_id("ATPase_tx2").upper_bound=8.3
 solution=flux_analysis.parsimonious.optimize_minimal_flux(CAM_model_pH_10)
 #check suc %
-predictSucPercent(CAM_model_pH_10)
+printSucGlcFrRatio(CAM_model_pH_10)
 
 
 ########################### SETUP C3 LEAF #####################################################
@@ -658,36 +737,53 @@ C3_model_default.reactions.get_by_id("ATPase_tx2").lower_bound=8.5
 C3_model_default.reactions.get_by_id("ATPase_tx2").upper_bound=8.5
 solution=flux_analysis.parsimonious.optimize_minimal_flux(C3_model_default)
 
-#sucrose = 50% phloem
+
+#ratio = 0.5
 C3_model_1 = C3_model.copy()
 for i in range(1,3):
-  C3_model_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.505,C3_model_1.metabolites.get_by_id("PROTON_e"+str(i)):0.505,C3_model_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.505})
+  C3_model_1.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_1.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.6658,C3_model_1.metabolites.get_by_id("GLC_c"+str(i)):0.06295,C3_model_1.metabolites.get_by_id("FRU_c"+str(i)):0.072,C3_model_1.metabolites.get_by_id("PROTON_e"+str(i)):0.80075,C3_model_1.metabolites.get_by_id("PROTON_c"+str(i)):-0.80075})
 
 
-C3_model_1.reactions.get_by_id("ATPase_tx2").lower_bound=9.2
-C3_model_1.reactions.get_by_id("ATPase_tx2").upper_bound=9.2
+
+
+C3_model_1.reactions.get_by_id("ATPase_tx2").lower_bound=10.9
+C3_model_1.reactions.get_by_id("ATPase_tx2").upper_bound=10.9
 solution=flux_analysis.parsimonious.optimize_minimal_flux(C3_model_1)
-#check suc:aa ratio
-predictSucAAratio(C3_model_1)
+#check suc %
+printSucGlcFrRatio(C3_model_1)
 
-#sucrose = 90% phloem
+#ratio = 0.75
+C3_model_31 = C3_model.copy()
+for i in range(1,3):
+  C3_model_31.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_31.metabolites.get_by_id("sSUCROSE_b"+str(i)):0.579,C3_model_31.metabolites.get_by_id("GLC_c"+str(i)):0.0547,C3_model_31.metabolites.get_by_id("FRU_c"+str(i)):0.0627,C3_model_31.metabolites.get_by_id("PROTON_e"+str(i)):0.6964,C3_model_31.metabolites.get_by_id("PROTON_c"+str(i)):-0.6964})
+
+C3_model_31.reactions.get_by_id("ATPase_tx2").lower_bound=9.8
+C3_model_31.reactions.get_by_id("ATPase_tx2").upper_bound=9.8
+solution=flux_analysis.parsimonious.optimize_minimal_flux(C3_model_31)
+#check suc %
+printSucGlcFrRatio(C3_model_31)
+
+
+
+
+#ratio = 0.99
 C3_model_10 = C3_model.copy()
 for i in range(1,3):
-  C3_model_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-1.32,C3_model_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.32,C3_model_10.metabolites.get_by_id("PROTON_c"+str(i)):1.32})
+  C3_model_10.reactions.get_by_id("Phloem_output_tx"+str(i)).add_metabolites({C3_model_10.metabolites.get_by_id("sSUCROSE_b"+str(i)):-6,C3_model_10.metabolites.get_by_id("GLC_c"+str(i)):-0.57,C3_model_10.metabolites.get_by_id("FRU_c"+str(i)):-0.65,C3_model_10.metabolites.get_by_id("PROTON_e"+str(i)):-1.32,C3_model_10.metabolites.get_by_id("PROTON_c"+str(i)):1.32})
 
 C3_model_10.reactions.get_by_id("ATPase_tx2").lower_bound=8.3
 C3_model_10.reactions.get_by_id("ATPase_tx2").upper_bound=8.3
 solution=flux_analysis.parsimonious.optimize_minimal_flux(C3_model_10)
-#check suc:aa ratio
-predictSucAAratio(C3_model_10)
+#check suc %
+printSucGlcFrRatio(C3_model_10)
 
 
 
 
 ################################### Vc/Vo CURVE FOR CAM WITH DIFFERENT PHLOEM COMPOSITIONS #############
 
-#sucrose - default
-test_model=CAM_model_pH_default.copy()
+#sucrose - 70%
+test_model=CAM_model_pH_31.copy()
 test_model.reactions.get_by_id("MALIC_NADP_RXN_c1").lower_bound=0
 test_model.reactions.get_by_id("MALIC_NADP_RXN_c1").upper_bound=0
 test_model.reactions.get_by_id("MALIC_NADP_RXN_p1").lower_bound=0
@@ -713,7 +809,7 @@ for i in [1000,160,80,40,20,10,5,3,2]:
   print b
   Rubisco_balance = Metabolite("rubisco_bal_p1", name = "Weights to balance RuBP carboxygenase oxygenase balance", compartment = "p1")
   
-  temp = CAM_model_pH_default.copy()
+  temp = CAM_model_pH_31.copy()
   temp.reactions.get_by_id("STARCH_p_dielTransfer").lower_bound = -1000
   temp.reactions.get_by_id("STARCH_p_dielTransfer").upper_bound = 1000
   temp.reactions.get_by_id("SUCROSE_v_dielTransfer").lower_bound = 0
@@ -735,7 +831,7 @@ for i in [1000,160,80,40,20,10,5,3,2]:
   #break
 
 
-writeAllFluxes(CAM_model_pH_default,solutiondict,"PEPCK_starch_SucAAdefault.csv")
+writeAllFluxes(CAM_model_pH_31,solutiondict,"PEPCK_starch_SucAA31.csv")
 
 #sucrose = 50% phloem
 test_model=CAM_model_pH_1.copy()
@@ -788,7 +884,7 @@ for i in [1000,160,80,40,20,10,5,3,2]:
 
 writeAllFluxes(CAM_model_pH_1,solutiondict,"PEPCK_starch_SucAA1.csv")
 
-#sucrose = 90% phloem
+#sucrose = 99% phloem
 test_model=CAM_model_pH_10.copy()
 test_model.reactions.get_by_id("MALIC_NADP_RXN_c1").lower_bound=0
 test_model.reactions.get_by_id("MALIC_NADP_RXN_c1").upper_bound=0
@@ -866,12 +962,12 @@ for k in sorted(ansA.keys()):
   yvalues3.append(ansA_2.get(k))
 
 curve = plt.subplot(111)
-curve.plot(xvalues2,yvalues,marker="o",label="CAM 76% sucrose phloem",color="green")
-curve.plot(xvalues2,yvalues2,marker="o",label="CAM 50% sucrose phloem",color="red")
-curve.plot(xvalues2,yvalues3,marker="o",label="CAM 90% sucrose phloem",color="blue")
+curve.plot(xvalues2,yvalues,marker="o",label="Phloem sugars : amino acids = 0.7",color="green")
+curve.plot(xvalues2,yvalues2,marker="o",label="Phloem sugars : amino acids = 0.5",color="red")
+curve.plot(xvalues2,yvalues3,marker="o",label="Phloem sugars : amino acids = 0.99",color="blue")
 curve.axvspan(np.log(float(1)/0.33),np.log(float(1)/0.14),alpha=0.3,color="green")
-curve.plot(xvalues2[1],convertOut2Cout(C3_model_default,C3_model_default.solution.f)*12*60*60/1000,marker="s",markersize=10,color="green")
-curve.axhline(y=convertOut2Cout(C3_model_default,C3_model_default.solution.f)*12*60*60/1000,ls="--",alpha=0.3,color="green")
+curve.plot(xvalues2[1],convertOut2Cout(C3_model_31,C3_model_31.solution.f)*12*60*60/1000,marker="s",markersize=10,color="green")
+curve.axhline(y=convertOut2Cout(C3_model_31,C3_model_31.solution.f)*12*60*60/1000,ls="--",alpha=0.3,color="green")
 curve.plot(xvalues2[1],convertOut2Cout(C3_model_1,C3_model_1.solution.f)*12*60*60/1000,marker="s",markersize=10,color="red")
 curve.axhline(y=convertOut2Cout(C3_model_1,C3_model_1.solution.f)*12*60*60/1000,ls="--",alpha=0.3,color="red")
 curve.plot(xvalues2[1],convertOut2Cout(C3_model_10,C3_model_10.solution.f)*12*60*60/1000,marker="s",markersize=10,color="blue")
