@@ -631,7 +631,7 @@ for rxn in CAM_model_pH.reactions:
     if(not str(rxn.notes)=="{}"):
       EC=rxn.notes.get("PROTEIN CLASS")[0]
     
-    fout.write(rxn.id+"\t"+rxn.name+"\t"+rxn.reaction+"\t"+comp+"\t"+path+"\t"+index+"\t"+EC+"\t0\t0\t0\t0\t"+str(CAM_model_pH.solution.x_dict.get(rxn.id))+"\t"+str(temp_model_1.solution.x_dict.get(rxn.id))+"\t"str(temp_model_2.solution.x_dict.get(rxn.id))+"\t"+str(temp_model2.solution.x_dict.get(rxn.id))+"\n")
+    fout.write(rxn.id+"\t"+rxn.name+"\t"+rxn.reaction+"\t"+comp+"\t"+path+"\t"+index+"\t"+EC+"\t0\t0\t0\t0\t"+str(CAM_model_pH.solution.x_dict.get(rxn.id))+"\t"+str(temp_model_1.solution.x_dict.get(rxn.id))+"\t"+str(temp_model_2.solution.x_dict.get(rxn.id))+"\t"+str(temp_model2.solution.x_dict.get(rxn.id))+"\n")
     
 
 fout.close()
