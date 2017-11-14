@@ -603,7 +603,7 @@ for rxn in C3_model.reactions:
   if(not str(rxn.notes)=="{}"):
     EC=rxn.notes.get("PROTEIN CLASS")[0]
   
-  fout.write(rxn.id+"\t"+rxn.name+"\t"+rxn.reaction+"\t"+comp+"\t"+path+"\t"+index+"\t"+EC+"\t"+str(C3_model.solution.x_dict.get(rxn.id))+"\t"+str(temp_model3.solution.x_dict.get(rxn.id))+"\t"+str(temp_model4.solution.x_dict.get(rxn.id))+"\t"+str(CAM_model_pH.solution.x_dict.get(rxn.id))+"\t"+str(temp_model.solution.x_dict.get(rxn.id))+"\t"+str(temp_model2.solution.x_dict.get(rxn.id))+"\n")
+  fout.write(rxn.id+"\t"+rxn.name+"\t"+rxn.reaction+"\t"+comp+"\t"+path+"\t"+index+"\t"+EC+"\t"+str(C3_model.solution.x_dict.get(rxn.id))+"\t"+str(temp_model3_1.solution.x_dict.get(rxn.id))+"\t"+str(temp_model3_2.solution.x_dict.get(rxn.id))+"\t"+str(temp_model4.solution.x_dict.get(rxn.id))+"\t"+str(CAM_model_pH.solution.x_dict.get(rxn.id))+"\t"+str(temp_model_1.solution.x_dict.get(rxn.id))+"\t"+str(temp_model_2.solution.x_dict.get(rxn.id))+"\t"+str(temp_model2.solution.x_dict.get(rxn.id))+"\n")
 
 
 for rxn in CAM_model_pH.reactions:
@@ -631,7 +631,7 @@ for rxn in CAM_model_pH.reactions:
     if(not str(rxn.notes)=="{}"):
       EC=rxn.notes.get("PROTEIN CLASS")[0]
     
-    fout.write(rxn.id+"\t"+rxn.name+"\t"+rxn.reaction+"\t"+comp+"\t"+path+"\t"+index+"\t"+EC+"\t0\t0\t0\t"+str(CAM_model_pH.solution.x_dict.get(rxn.id))+"\t"+str(temp_model.solution.x_dict.get(rxn.id))+"\t"+str(temp_model2.solution.x_dict.get(rxn.id))+"\n")
+    fout.write(rxn.id+"\t"+rxn.name+"\t"+rxn.reaction+"\t"+comp+"\t"+path+"\t"+index+"\t"+EC+"\t0\t0\t0\t0\t"+str(CAM_model_pH.solution.x_dict.get(rxn.id))+"\t"+str(temp_model_1.solution.x_dict.get(rxn.id))+"\t"str(temp_model_2.solution.x_dict.get(rxn.id))+"\t"+str(temp_model2.solution.x_dict.get(rxn.id))+"\n")
     
 
 fout.close()
@@ -639,30 +639,30 @@ fout.close()
 
 ################################ TO PRINT ATP AND NADPH REACTIONS ###########################
 #replace suffix 1 with 2 to print dark fluxes
+fout = open("NADPH_fluxes","w")
 
 for p in ("c","p","m"):
   met=C3_model.metabolites.get_by_id("NADPH_"+p+"1")
-  #met1=C3_model.metabolites.get_by_id("aATP_"+p+"2")
   for rxn in met.reactions:
     #if (rxn.metabolites.get(met)>0) or (rxn.reversibility and rxn.metabolites.get(met)<0):
       sto=rxn.metabolites.get(met)
       sto1=0#rxn.metabolites.get(met1)
-      print  rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment
+      fout.write(rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment)
 
-#fout.close()
+fout.close()
 
+fout = open("NADH_fluxes","w")
 
 for p in ("c","p","m","x"):
   met=C3_model.metabolites.get_by_id("NADH_"+p+"1")
-  #met1=C3_model.metabolites.get_by_id("aATP_"+p+"2")
   for rxn in met.reactions:
-    #if (rxn.metabolites.get(met)>0) or (rxn.reversibility and rxn.metabolites.get(met)<0):
       sto=rxn.metabolites.get(met)
-      sto1=0#rxn.metabolites.get(met1)
-      print  rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment
+      sto1=0
+      fout.write(rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment)
 
-#fout.close()
+fout.close()
 
+fout = open("ATP_fluxes","w")
 
 for p in ("c","p","m","x"):
   met=C3_model.metabolites.get_by_id("ATP_"+p+"1")
@@ -670,22 +670,23 @@ for p in ("c","p","m","x"):
   for rxn in met.reactions:
     #if (rxn.metabolites.get(met)>0) or (rxn.reversibility and rxn.metabolites.get(met)<0):
       sto=rxn.metabolites.get(met)
-      sto1=0#rxn.metabolites.get(met1)
-      print  rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment
+      sto1=rxn.metabolites.get(met1)
+      fout.write(rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment)
 
-#fout.close()
+fout.close()
 
 
 ################################ TO PRINT PROTON REACTIONS ###########################
 #replace suffix 1 with 2 to print dark fluxes
+fout = open("PROTON_fluxes","w")
+
 for p in ("c","p","m","x","e"):
   met=C3_model.metabolites.get_by_id("PROTON_"+p+"1")
-  #met1=C3_model.metabolites.get_by_id("aATP_"+p+"2")
   for rxn in met.reactions:
     #if (rxn.metabolites.get(met)>0) or (rxn.reversibility and rxn.metabolites.get(met)<0):
       sto=rxn.metabolites.get(met)
       sto1=0#rxn.metabolites.get(met1)
-      print  rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment
+      fout.write(rxn.id+"#"+rxn.reaction+"#"+str(C3_model.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model3_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model4.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(CAM_model_pH.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_1.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model_2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+str(temp_model2.solution.x_dict.get(rxn.id)*(sto+sto1))+"#"+met.compartment)
 
-#fout.close()
+fout.close()
 
