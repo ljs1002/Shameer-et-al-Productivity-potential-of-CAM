@@ -47,4 +47,5 @@ The latter method is recommended as it maintains the data in the python environm
 * FractionalCharges - a file containing metabolite charges (to complement charge attribute in the model)  
 * MetabolitesToTransfer - a file listing metabolites that will be allowed to accumulate over the diel cycle  
 * VacuolarMetabolitesAtpH3DOT3 - a file listing metabolites that exists as fractional charges at pH=3.3
-* OpuntiaBiomass - phloem composition reported in Opuntia ficus indica
+* OpuntiaBiomass - phloem composition reported in Opuntia ficus indica  
+* studyFunction - a python module with functions used in scripts 1-17
