@@ -1,3 +1,10 @@
+###########################################################################
+# This is a python module containing all the functions used in scripts1-17#
+#									  #
+###########################################################################
+
+
+
 #This function predicts the carbon conversion efficiency of night time metabolism
 def predictCCE(C3_model):
   import re
