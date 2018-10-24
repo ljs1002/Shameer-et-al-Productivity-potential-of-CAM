@@ -49,3 +49,4 @@ The latter method is recommended as it maintains the data in the python environm
 * VacuolarMetabolitesAtpH3DOT3 - a file listing metabolites that exists as fractional charges at pH=3.3
 * OpuntiaBiomass - phloem composition reported in Opuntia ficus indica  
 * studyFunction - a python module with functions used in scripts 1-17
+* core_model_4GA_20_10_17.xml - a proton balanced model of primary metabolism in plant cells
